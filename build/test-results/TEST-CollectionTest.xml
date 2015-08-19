@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CollectionTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-19T21:10:43" hostname="epicodus-105.local" time="0.051">
+  <properties/>
+  <testcase name="clear_emptiesAllTasksFromArrayList" classname="CollectionTest" time="0.049"/>
+  <testcase name="find_returnsNullWhenNoCollectionFound_null" classname="CollectionTest" time="0.0"/>
+  <testcase name="task_instantiatesCorrectly_true" classname="CollectionTest" time="0.0"/>
+  <testcase name="newId_collectionsInstantiateWithAnID_true" classname="CollectionTest" time="0.0"/>
+  <testcase name="collection_instantiatesWithTitle_true" classname="CollectionTest" time="0.001"/>
+  <testcase name="collection_instantiatesWithArtist_true" classname="CollectionTest" time="0.0"/>
+  <testcase name="all_returnsAllInstancesOfCollection_true" classname="CollectionTest" time="0.0"/>
+  <testcase name="find_returnsCollectionWithSameId_secondCollection" classname="CollectionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

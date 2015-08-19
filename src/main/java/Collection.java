@@ -2,31 +2,32 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
-public class Task { //class Task
+public class Collection { //class Task
 
-  private static ArrayList<Task> instances = new ArrayList<Task>();
+  private static ArrayList<Collection> instances = new ArrayList<Collection>();
 
-  private String mDescription;
-  private boolean mCompleted;
+  private String mTitle;
+  private String mArtist;
   private LocalDateTime mCreatedAt;
   private int mId;
 
-
-  public Task(String description) {
-    mDescription = description;
-    mCompleted = false;
+  //blueprint for creating an object for the constructor Collection
+  public Collection(String title, String artist) {
+    mTitle = title;
+    mArtist = artist;
     mCreatedAt = LocalDateTime.now();
     instances.add(this);
     mId = instances.size(); //total size of the array( 5 tasks = size 5) not indiv. objects
   }// constructor has all the instructions for making a new instance of the class task
   //constructors are named after the class, they are actually methods
 
-  public String getDescription(){
-    return mDescription;
+
+  public String getTitle(){
+    return mTitle;
   }
 
-  public boolean isCompleted() {
-    return mCompleted;
+  public String getArtist(){
+    return mArtist;
   }
 
   public LocalDateTime getCreatedAt() {
@@ -37,18 +38,18 @@ public class Task { //class Task
     return mId;
   }
 
-  public static ArrayList<Task> all() {
+  public static ArrayList<Collection> all() {
     return instances;
   }
 
-  public static Task find (int id){
+  public static Collection find (int id){
     try {
       return instances.get(id - 1);
-    } catch (IndexOutOfBoundsException e){
+    } catch (IndexOutOfBoundsException e){ //built in Java
       return null;
     }
   }
-  
+
   public static void clear() {
     instances.clear();
   }
