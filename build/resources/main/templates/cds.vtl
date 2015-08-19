@@ -1,0 +1,7 @@
+<h1> All tasks </h1>
+<ul>
+#foreach ($collection in $collections)
+  <li><a href="/cds/$collection.getId()">$collection.getTitle() by $collection.getArtist()</a></li>
+#end
+</ul>
+<a href="/cds/new">Add New CD</a>

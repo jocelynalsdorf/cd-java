@@ -20,4 +20,33 @@ public class AppTest extends FluentTest{
 
 
 
+  @Test
+  public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("Library for Your CD Collection");
+  }
+
+  @Test
+  public void collectionIsCreatedTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a new CD"));
+    fill("#title").with("Mi Tierra");
+    fill("#artist").with("GloriaEstefan");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your collection has been saved.");
+  }
+
+  @Test
+  public void collectionIsDisplayedTest() {
+    goTo("http://localhost:4567/cds/new");
+    fill("#title").with("Mi Tierra");
+    fill("#artist").with("GloriaEstefan");
+    submit(".btn");
+    click("a", withText("Go Back"));
+    assertThat(pageSource()).contains("Mi Tierra");
+
+  }
+
+
+
 }
